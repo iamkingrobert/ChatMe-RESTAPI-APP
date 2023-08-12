@@ -6,7 +6,7 @@ const AuthPage = (props) => {
     e.preventDefault();
     const { value } = e.target[0];
     axios
-      .post("https://chat-me-backend.vercel.app/authenticate", { username: value })
+      .post("https://chatme-backend.onrender.com/authenticate", { username: value })
       .then((r) => props.onAuth({ ...r.data, secret: value }))
       .catch((e) => console.log("error", e));
   };
